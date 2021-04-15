@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block page %}
+
+    <div class="col-md-4">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="card my-4">
+            <h5 class="card-header">New Post</h5>
+            <div class="card-body">
+                <div class="input-group">
+                    {{ form.title }}
+                    <span class="input-group-append">
+
+                    </span>
+                </div>
+                 <div class="input-group">
+                    {{ form.content }}
+                    <span class="input-group-append">
+
+                    </span>
+                </div>
+            </div>
+        </div>
+            <button class="btn btn-primary">save</button>
+        </form>
+
+    </div>
+{% endblock %}
